@@ -57,14 +57,17 @@ public class HelloServlet extends HttpServlet {
 		//	응답 포맷 결정
 		//	text/html -> MIME Type
 		resp.setContentType("text/html; charset=UTF-8");
+		
 		//	name 파라미터를 받음
 		String name = req.getParameter("name");
 		
 		if (name == null) {
 			name = "Anonymous";
 		}
+		
 		//	환영 메시지 출력
 //		super.doGet(req, resp);
+		
 		//	서블릿 파라미터 받아오기
 		ServletConfig config = getServletConfig();
 		logger.info("ServletName:" + config.getInitParameter("servletName"));
