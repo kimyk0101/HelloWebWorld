@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hello Web World</title>
+</head>
+<body>
+	<h1>Hello Web World</h1>
+	<h3>Static HTML Page</h3>
+	<p>이것은 정적 HTML로 만들어진 페이지입니다.</p>
+	
+	<h3>GET 전송</h3>
+	<p><a href="/HelloWorld/hello.jsp?name=홍길동">GET hello.jsp 호출</a>
+	<p><a href="/HelloWorld/hs?name=서블릿">GET HelloServlet 호출</a>
+	
+	<h3>POST 전송</h3>
+	<p>Send POST Data to HelloServlet</p>
+	<form method="POST"
+		action="/HelloWorld/hs">
+		<label for="last_name">성</label>
+		<input type="text"
+				id="last_name"
+				name="last_name"
+				placeholder="성을 입력하세요" /><br />
+		<label for="first_name">이름</label>
+		<input type="text"
+				id="first_name"
+				name="first_name"
+				placeholder="이름을 입력하세요" /><br />
+		<input type="submit" value="전송" />
+		<input type="reset" value="초기화" />
+	</form>
+	
+</body>
+</html>
