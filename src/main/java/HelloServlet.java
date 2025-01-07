@@ -8,11 +8,17 @@ import java.util.logging.Logger;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebInitParam;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 //	/hs URL에 연결
+@WebServlet(name="MyFirstServlet", urlPatterns="/hs", 
+		initParams= {@WebInitParam(name="servletName", value="HelloServlet"),
+					@WebInitParam(name="description", value="나의 첫 번째 서블릿입니다.")})
+
 public class HelloServlet extends HttpServlet {
 	private static final Logger logger =
 			Logger.getLogger("HelloServlet");

@@ -10,8 +10,10 @@ import jakarta.servlet.FilterConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import jakarta.servlet.annotation.WebFilter;
 
 //	필터는 인터페이스
+@WebFilter(urlPatterns="/*")
 public class EncodingFilter implements Filter {
 	private static Logger logger = Logger.getLogger(EncodingFilter.class.getSimpleName());
 	
